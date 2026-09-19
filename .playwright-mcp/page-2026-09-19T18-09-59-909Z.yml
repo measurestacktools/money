@@ -1,0 +1,246 @@
+- generic [ref=f90e2]:
+  - generic [ref=f90e3]:
+    - link "Skip to content" [ref=f90e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f90e8]:
+      - generic [ref=f90e9]:
+        - generic [ref=f90e10]:
+          - button "Open menu" [ref=f90e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f90e15] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f90e18]:
+          - navigation "Breadcrumbs" [ref=f90e19]:
+            - list [ref=f90e20]:
+              - listitem [ref=f90e21]:
+                - link "Settings" [ref=f90e22] [cursor=pointer]:
+                  - /url: /settings
+          - button "Open quick search dialog, type / to search" [ref=f90e26] [cursor=pointer]:
+            - generic [ref=f90e28]:
+              - generic:
+                - text: Type
+                - generic: /
+                - text: to search
+        - generic [ref=f90e29]:
+          - generic [ref=f90e30]:
+            - generic [ref=f90e33]:
+              - link "Chat with Copilot" [ref=f90e35] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f90e40] [cursor=pointer]
+            - button "Create new..." [ref=f90e42] [cursor=pointer]
+            - generic [ref=f90e44]:
+              - link "All issues (g then i)" [ref=f90e45] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests (g then p)" [ref=f90e49] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f90e52] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f90e55] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f90e59] [cursor=pointer]:
+            - img "User avatar" [ref=f90e60]
+  - main [ref=f90e63]:
+    - generic [ref=f90e64]:
+      - generic [ref=f90e65]:
+        - generic [ref=f90e66]:
+          - img "@rayanbaig796-crypto" [ref=f90e67]
+          - generic [ref=f90e68]:
+            - heading "rayanbaig796-crypto (rayanbaig796-crypto) settings" [level=1] [ref=f90e69]:
+              - link "rayanbaig796-crypto (rayanbaig796-crypto)" [ref=f90e70] [cursor=pointer]:
+                - /url: /rayanbaig796-crypto
+              - generic [ref=f90e71]: settings
+            - paragraph [ref=f90e73]: Your personal account
+        - button "Switch settings context" [ref=f90e77] [cursor=pointer]
+      - generic [ref=f90e80]:
+        - navigation "User settings" [ref=f90e85]:
+          - list [ref=f90e87]:
+            - listitem [ref=f90e88]:
+              - link "Public profile" [ref=f90e89] [cursor=pointer]:
+                - /url: /settings/profile
+            - listitem [ref=f90e91]:
+              - link "Account" [ref=f90e92] [cursor=pointer]:
+                - /url: /settings/admin
+            - listitem [ref=f90e94]:
+              - link "Appearance" [ref=f90e95] [cursor=pointer]:
+                - /url: /settings/appearance
+            - listitem [ref=f90e97]:
+              - link "Accessibility" [ref=f90e98] [cursor=pointer]:
+                - /url: /settings/accessibility
+            - listitem [ref=f90e100]:
+              - link "Notifications" [ref=f90e101] [cursor=pointer]:
+                - /url: /settings/notifications
+            - listitem [aria-hidden] [ref=f90e103]
+            - listitem [ref=f90e104]:
+              - generic [ref=f90e107]:
+                - heading "Access" [level=2] [ref=f90e109]
+                - list "Access" [ref=f90e110]:
+                  - listitem [ref=f90e111]:
+                    - button "Billing and licensing" [ref=f90e112] [cursor=pointer]
+                  - listitem [ref=f90e114]:
+                    - link "Emails" [ref=f90e115] [cursor=pointer]:
+                      - /url: /settings/emails
+                  - listitem [ref=f90e117]:
+                    - link "Password and authentication" [ref=f90e118] [cursor=pointer]:
+                      - /url: /settings/security
+                  - listitem [ref=f90e120]:
+                    - link "Sessions" [ref=f90e121] [cursor=pointer]:
+                      - /url: /settings/sessions
+                  - listitem [ref=f90e123]:
+                    - link "SSH and GPG keys" [ref=f90e124] [cursor=pointer]:
+                      - /url: /settings/keys
+                  - listitem [ref=f90e126]:
+                    - link "Credentials" [ref=f90e127] [cursor=pointer]:
+                      - /url: /settings/credentials
+                  - listitem [ref=f90e129]:
+                    - link "Organizations" [ref=f90e130] [cursor=pointer]:
+                      - /url: /settings/organizations
+                  - listitem [ref=f90e132]:
+                    - link "Enterprises" [ref=f90e133] [cursor=pointer]:
+                      - /url: /settings/enterprises
+                  - listitem [ref=f90e135]:
+                    - button "Moderation" [ref=f90e136] [cursor=pointer]
+            - listitem [aria-hidden] [ref=f90e138]
+            - listitem [ref=f90e139]:
+              - generic [ref=f90e142]:
+                - heading "Code, planning, and automation" [level=2] [ref=f90e144]
+                - list "Code, planning, and automation" [ref=f90e145]:
+                  - listitem [ref=f90e146]:
+                    - link "Repositories" [ref=f90e147] [cursor=pointer]:
+                      - /url: /settings/repositories
+                  - listitem [ref=f90e149]:
+                    - link "Codespaces" [ref=f90e150] [cursor=pointer]:
+                      - /url: /settings/codespaces
+                  - listitem [ref=f90e152]:
+                    - link "Packages" [ref=f90e153] [cursor=pointer]:
+                      - /url: /settings/packages
+                  - listitem [ref=f90e155]:
+                    - button "Copilot" [ref=f90e156] [cursor=pointer]
+                  - listitem [ref=f90e158]:
+                    - link "Pages" [ref=f90e159] [cursor=pointer]:
+                      - /url: /settings/pages
+                  - listitem [ref=f90e161]:
+                    - link "Saved replies" [ref=f90e162] [cursor=pointer]:
+                      - /url: /settings/replies
+            - listitem [aria-hidden] [ref=f90e164]
+            - listitem [ref=f90e165]:
+              - generic [ref=f90e168]:
+                - heading "Security" [level=2] [ref=f90e170]
+                - list "Security" [ref=f90e171]:
+                  - listitem [ref=f90e172]:
+                    - link "Code security" [ref=f90e173] [cursor=pointer]:
+                      - /url: /settings/security_analysis
+            - listitem [aria-hidden] [ref=f90e175]
+            - listitem [ref=f90e176]:
+              - generic [ref=f90e179]:
+                - heading "Integrations" [level=3] [ref=f90e181]
+                - list "Integrations" [ref=f90e182]:
+                  - listitem [ref=f90e183]:
+                    - link "Applications" [ref=f90e184] [cursor=pointer]:
+                      - /url: /settings/installations
+                  - listitem [ref=f90e186]:
+                    - link "Scheduled reminders" [ref=f90e187] [cursor=pointer]:
+                      - /url: /settings/reminders
+            - listitem [aria-hidden] [ref=f90e189]
+            - listitem [ref=f90e190]:
+              - generic [ref=f90e193]:
+                - heading "Archives" [level=2] [ref=f90e195]
+                - list "Archives" [ref=f90e196]:
+                  - listitem [ref=f90e197]:
+                    - link "Security log" [ref=f90e198] [cursor=pointer]:
+                      - /url: /settings/security-log
+                  - listitem [ref=f90e200]:
+                    - link "Sponsorship log" [ref=f90e201] [cursor=pointer]:
+                      - /url: /settings/sponsors-log
+            - listitem [aria-hidden] [ref=f90e203]
+            - listitem [ref=f90e204]:
+              - link "Developer settings" [ref=f90e205] [cursor=pointer]:
+                - /url: /settings/apps
+        - generic [ref=f90e210]:
+          - heading "Change username" [level=2] [ref=f90e212]
+          - paragraph [ref=f90e213]:
+            - text: Changing your username can have
+            - link "unintended side effects" [ref=f90e214] [cursor=pointer]:
+              - /url: https://docs.github.com/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/changing-your-github-username
+            - text: .
+          - button "Change username" [ref=f90e215] [cursor=pointer]
+          - paragraph [ref=f90e218]:
+            - text: Looking to manage account security settings? You can find them in the
+            - link "Password and authentication" [ref=f90e221] [cursor=pointer]:
+              - /url: /settings/security
+            - text: page.
+          - heading "Link Patreon account" [level=2] [ref=f90e223]
+          - paragraph [ref=f90e224]:
+            - text: Connect a Patreon account for
+            - strong [ref=f90e225]: "@rayanbaig796-crypto"
+            - text: to sponsor maintainers with. Get recognition on GitHub for sponsorships made on Patreon when the sponsored person has linked Patreon and GitHub, too, and has a public GitHub Sponsors profile.
+          - link "Connect with Patreon" [ref=f90e226] [cursor=pointer]:
+            - /url: /sponsors/accounts/patreon/connect?sponsor=rayanbaig796-crypto
+          - heading "Export account data" [level=2] [ref=f90e230]
+          - paragraph [ref=f90e231]:
+            - text: Export all repositories and profile metadata for
+            - strong [ref=f90e232]: "@rayanbaig796-crypto"
+            - text: . Exports will be available for 7 days.
+          - button "Start export" [ref=f90e234] [cursor=pointer]
+          - heading "Successor settings" [level=2] [ref=f90e236]
+          - paragraph [ref=f90e237]:
+            - text: By clicking "Add Successor" below, I acknowledge that I am the owner of the @rayanbaig796-crypto account, and am authorizing GitHub to transfer content within that account to my GitHub Successor, designated below, in the event of my death. I understand that this appointment of a successor does not override legally binding next-of-kin rules or estate laws of any relevant jurisdiction, and does not create a binding will.
+            - link "Learn more about account successors." [ref=f90e238] [cursor=pointer]:
+              - /url: https://docs.github.com/github/setting-up-and-managing-your-github-user-account/maintaining-ownership-continuity-of-your-user-accounts-repositories
+          - search "Designate Successor" [ref=f90e239]:
+            - generic [ref=f90e241]:
+              - generic [ref=f90e243]:
+                - generic [ref=f90e244]: Search by username, full name, or email address
+                - combobox "Search by username, full name, or email address" [ref=f90e246]
+              - button "Add Successor" [disabled] [ref=f90e249]
+          - heading "You have not designated a successor." [level=2] [ref=f90e253]
+          - heading "Delete account" [level=2] [ref=f90e255]
+          - paragraph [ref=f90e256]:
+            - text: "Your account is currently an owner in these organizations:"
+            - strong [ref=f90e257]: developerskit99
+          - paragraph [ref=f90e258]:
+            - text: You must
+            - link "remove yourself from these organizations" [ref=f90e259] [cursor=pointer]:
+              - /url: https://docs.github.com/organizations/managing-membership-in-your-organization/removing-a-member-from-your-organization
+            - text: ","
+            - link "transfer ownership" [ref=f90e260] [cursor=pointer]:
+              - /url: https://docs.github.com/organizations/managing-organization-settings/transferring-organization-ownership
+            - text: ", or"
+            - link "delete these organizations" [ref=f90e261] [cursor=pointer]:
+              - /url: https://docs.github.com/organizations/managing-organization-settings/deleting-an-organization-account
+            - text: before you can delete your user.
+          - paragraph [ref=f90e262]:
+            - button "Delete your account" [disabled] [ref=f90e263]
+  - contentinfo [ref=f90e264]:
+    - heading "Footer" [level=2] [ref=f90e265]
+    - generic [ref=f90e266]:
+      - generic [ref=f90e267]:
+        - link "GitHub Homepage" [ref=f90e268] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f90e271]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f90e272]:
+        - heading "Footer navigation" [level=3] [ref=f90e273]
+        - list "Footer navigation" [ref=f90e274]:
+          - listitem [ref=f90e275]:
+            - link "Terms" [ref=f90e276] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f90e277]:
+            - link "Privacy" [ref=f90e278] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f90e279]:
+            - link "Security" [ref=f90e280] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f90e281]:
+            - link "Status" [ref=f90e282] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f90e283]:
+            - link "Community" [ref=f90e284] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f90e285]:
+            - link "Docs" [ref=f90e286] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f90e287]:
+            - link "Contact" [ref=f90e288] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f90e289]:
+            - button "Manage cookies" [ref=f90e291] [cursor=pointer]
+          - listitem [ref=f90e292]:
+            - button "Do not share my personal information" [ref=f90e294] [cursor=pointer]

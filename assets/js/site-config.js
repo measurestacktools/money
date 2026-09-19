@@ -5,7 +5,7 @@
 window.SITE = window.SITE || {
   NAME: "MeasureStack",
   TAGLINE: "How much material do I need?",
-  SITE_URL: "https://rayanbaig796-crypto.github.io/money",
+  SITE_URL: "https://measurestacktools.github.io/money",
   BASE_PATH: "/money/"
 };
 (function () {

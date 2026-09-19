@@ -5,7 +5,7 @@ import os, json
 ROOT = os.path.dirname(os.path.abspath(__file__))
 exec(open(os.path.join(ROOT, "build_tools_data.py"), encoding="utf-8").read())
 
-SITE_CANON = "https://rayanbaig796-crypto.github.io/money"
+SITE_CANON = "https://measurestacktools.github.io/money"
 BASE = "/money"
 ASSET = lambda depth: ("../" * depth + "assets/")
 
