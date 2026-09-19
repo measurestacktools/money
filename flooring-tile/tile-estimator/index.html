@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tile Calculator — Tiles & Grout | MeasureStack</title>
+<meta name="description" content="How many tiles and how much grout? Floor/wall area + tile size → tiles with cut waste and grout estimate.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/flooring-tile/tile-estimator/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/flooring-tile/">Flooring & Tile</a> › Tile Calculator</nav>
+<h1>Tile Calculator</h1>
+<p>Tile count from area ÷ tile face area; grout in pounds is an editable assumption (default 0.5 lb/sq ft).</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="TA">Area length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="TA" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="TB">Area width (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="TB" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="TT">Tile length (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="TT" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="TWt">Tile width (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="TWt" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="TL2">Layout</label><select id="TL2"><option value="10">Straight (+10%)</option><option value="15">Diagonal (+15%)</option></select></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Tiles = area ÷ tileArea + waste (10% straight, 15% diagonal). Grout ≈ area × editable lb/sq ft.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 100 sq ft with 12×12-in tile: 100 tiles +10% → 110; grout ≈ 50 lb.</p></section>
+<section class="card"><h2>Questions</h2><h3>Straight vs diagonal layout?</h3><p>Diagonal uses ~15% waste vs ~10% for grid, due to triangle cuts.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/flooring-tile/grout-calculator/">Grout Calculator</a></li><li><a href="/money/flooring-tile/laminate-flooring/">Laminate Floor Calculator</a></li><li><a href="/money/walls-paint/paint-coverage/">Paint Calculator</a></li></ul>
+<p><a href="/money/flooring-tile/">Flooring & Tile estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Straight vs diagonal layout?","acceptedAnswer":{"@type":"Answer","text":"Diagonal uses ~15% waste vs ~10% for grid, due to triangle cuts."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Flooring & Tile","item":"https://rayanbaig796-crypto.github.io/money/flooring-tile/"},{"@type":"ListItem","position":3,"name":"Tile Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('TA').value,LU);var W=Calc.lenToM(document.getElementById('TB').value,LU);
+ var tl=Calc.lenToM(document.getElementById('TT').value,SU);var tw=Calc.lenToM(document.getElementById('TWt').value,SU);
+ if(!(L>0&&W>0&&tl>0&&tw>0))throw new Error('Enter area and tile sizes.');
+ var n=(L*W)/(tl*tw);var w=Number(document.getElementById('TL2').value);var buy=Math.ceil(n*(1+w/100)-1e-9);
+ var sqft=(L*W)/0.09290304;
+ return {html:'Tiles exact: '+Calc.fmt(n,1)+'<br><span class="buy">Buy: '+buy+' tiles</span> (+'+w+'%)<br>Grout ≈ '+Calc.fmt(sqft*0.5)+' lb (0.5 lb/sq ft editable assumption — verify product)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

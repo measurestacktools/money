@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roof Pitch Calculator — Angle & Multiplier | MeasureStack</title>
+<meta name="description" content="Convert roof rise and run to pitch, angle and area multiplier for shingle and sheathing math.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/roofing/roof-pitch/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/roofing/">Roofing & Gutters</a> › Roof Pitch Calculator</nav>
+<h1>Roof Pitch Calculator</h1>
+<p>Pitch = rise per 12-in run. Angle = arctan(rise/run). Multiplier = √(1+(pitch/12)²).</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="field"><label for="PA2">Rise (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="PA2" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="PB2">Run (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="PB2" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Angle° = atan(rise/run). Area multiplier = hypotenuse ÷ run.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 6/12 → 26.6° → multiplier 1.118.</p></section>
+<section class="card"><h2>Questions</h2><h3>Why does pitch matter for materials?</h3><p>Steeper roofs have more true area than their footprint — multiply footprint by the multiplier.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/roofing/roof-shingles/">Roof Shingle Calculator</a></li><li><a href="/money/roofing/metal-roofing/">Metal Roof Calculator</a></li><li><a href="/money/lumber-framing/plywood-sheets/">Plywood Sheet Calculator</a></li></ul>
+<p><a href="/money/roofing/">Roofing & Gutters estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does pitch matter for materials?","acceptedAnswer":{"@type":"Answer","text":"Steeper roofs have more true area than their footprint \u2014 multiply footprint by the multiplier."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Roofing & Gutters","item":"https://rayanbaig796-crypto.github.io/money/roofing/"},{"@type":"ListItem","position":3,"name":"Roof Pitch Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var r=Number(document.getElementById('PA2').value),rn=Number(document.getElementById('PB2').value);
+ if(!(r>=0&&rn>0))throw new Error('Enter rise and run.');
+ var pitch=r/rn*12,ang=Math.atan(r/rn)*180/Math.PI,mult=Math.sqrt(1+Math.pow(r/rn,2));
+ return {html:'Pitch: <strong>'+Calc.fmt(pitch,1)+' / 12</strong><br>Angle: '+Calc.fmt(ang,1)+'°<br>Area multiplier: ×'+Calc.fmt(mult,3)};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

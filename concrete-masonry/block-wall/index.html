@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Block Calculator — Blocks & Mortar | MeasureStack</title>
+<meta name="description" content="How many concrete blocks and how much mortar for a wall? Enter wall size; get blocks, mortar bags and waste allowance.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/concrete-masonry/block-wall/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/concrete-masonry/">Concrete & Masonry</a> › Concrete Block Calculator</nav>
+<h1>Concrete Block Calculator</h1>
+<p>Standard 16×8-in blocks cover about 0.89 sq ft each in a wall (with mortar joint) — an assumption you can adjust. Get block count plus mortar.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="BL">Wall length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="BL" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BH">Wall height (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="BH" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="COV">Coverage per block (sq ft) (<span data-unit-label data-imp="sq ft" data-met="sq ft">sq ft</span>)</label>
+<input type="number" id="COV" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BW">Waste % (<span data-unit-label data-imp="%" data-met="%">%</span>)</label>
+<input type="number" id="BW" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Wall area = L × H. Blocks = area ÷ editable coverage per block, rounded up + waste. Mortar ≈ 0.15 cu ft per block (editable).</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 20 ft × 4 ft = 80 sq ft ÷ 0.89 ≈ 90 blocks; +5% → buy 95.</p></section>
+<section class="card"><h2>Questions</h2><h3>Do I subtract windows and doors?</h3><p>Yes — enter net wall area after subtracting openings for best accuracy.</p><h3>How much mortar per block?</h3><p>Roughly 0.1–0.2 cu ft per standard block depending on joint; default 0.15, editable.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/concrete-masonry/brick-wall/">Brick Calculator</a></li><li><a href="/money/concrete-masonry/mortar-mix/">Mortar Calculator</a></li><li><a href="/money/concrete-masonry/rebar-grid/">Rebar Calculator</a></li></ul>
+<p><a href="/money/concrete-masonry/">Concrete & Masonry estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I subtract windows and doors?","acceptedAnswer":{"@type":"Answer","text":"Yes \u2014 enter net wall area after subtracting openings for best accuracy."}},{"@type":"Question","name":"How much mortar per block?","acceptedAnswer":{"@type":"Answer","text":"Roughly 0.1\u20130.2 cu ft per standard block depending on joint; default 0.15, editable."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Concrete & Masonry","item":"https://rayanbaig796-crypto.github.io/money/concrete-masonry/"},{"@type":"ListItem","position":3,"name":"Concrete Block Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('BL').value,LU);var H=Calc.lenToM(document.getElementById('BH').value,LU);
+ var A=L*H/0.09290304;L=Calc.nonNeg(L,'L');H=Calc.nonNeg(H,'H');if(!(L>0&&H>0))throw new Error('Enter wall length and height.');
+ var cov=document.getElementById('COV').value===''?'0.89':document.getElementById('COV').value;cov=Number(cov);if(!(cov>0))throw new Error('Coverage must be positive.');
+ var w=document.getElementById('BW').value===''?'5':document.getElementById('BW').value;w=Number(w);
+ var n=A/cov,buy=Math.ceil(n*(1+w/100)-1e-9);var mortarCuFt=n*0.15,mortarBags=mortarCuFt/0.60;
+ return {html:'Wall area: '+Calc.fmt(A)+' sq ft<br>Calculated: '+Calc.fmt(n,1)+' blocks<br><span class="buy">Buy: '+buy+' blocks</span> (+'+w+'%)<br>Mortar ≈ '+Calc.fmt(mortarCuFt)+' cu ft (~'+Calc.fmt(mortarBags,1)+' 80-lb bags at 0.60 cu ft — verify product)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gutter Calculator — Length & Downspouts | MeasureStack</title>
+<meta name="description" content="How much gutter and how many downspouts? Eave length → gutter feet, hangers and downspouts.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/roofing/gutter-calculator/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/roofing/">Roofing & Gutters</a> › Gutter Calculator</nav>
+<h1>Gutter Calculator</h1>
+<p>Gutter = eave length + waste. Hangers every ~2 ft. Downspouts roughly every 30–40 ft per eave.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="GE">Eave length (one run) (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="GE" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="GN">Number of eave runs (<span data-unit-label data-imp="count" data-met="count">count</span>)</label>
+<input type="number" id="GN" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Gutter ft = eaves total × (1+waste). Downspouts = ceil(eave ÷ 35) per run (planning rule).</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 60-ft eave → 63 ft gutter (+5%), 2 downspouts, ~30 hangers.</p></section>
+<section class="card"><h2>Questions</h2><h3>What size gutters?</h3><p>5-in K-style suits most homes; 6-in for steep/large roofs — confirm with local practice.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/roofing/roof-shingles/">Roof Shingle Calculator</a></li><li><a href="/money/roofing/metal-roofing/">Metal Roof Calculator</a></li><li><a href="/money/roofing/roof-pitch/">Roof Pitch Calculator</a></li></ul>
+<p><a href="/money/roofing/">Roofing & Gutters estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size gutters?","acceptedAnswer":{"@type":"Answer","text":"5-in K-style suits most homes; 6-in for steep/large roofs \u2014 confirm with local practice."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Roofing & Gutters","item":"https://rayanbaig796-crypto.github.io/money/roofing/"},{"@type":"ListItem","position":3,"name":"Gutter Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var e=Calc.lenToM(document.getElementById('GE').value,LU);var n=Number(document.getElementById('GN').value||1);
+ if(!(e>0&&n>0))throw new Error('Enter eave length and runs.');
+ var totFt=e/0.3048*n;var gutter=Math.ceil(totFt*1.05);var ds=Math.ceil(e/0.3048/35)*n;var hang=Math.ceil(totFt/2);
+ return {html:'Gutter: <strong>'+Calc.fmt(gutter)+' lin ft</strong><br>Downspouts ≈ '+ds+'<br>Hangers ≈ '+hang+' (every ~2 ft)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

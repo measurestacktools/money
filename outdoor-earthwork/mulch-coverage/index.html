@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mulch Calculator — Yards & Bags | MeasureStack</title>
+<meta name="description" content="How much mulch for beds? Enter bed area and depth to get cubic yards and 2-cu-ft bags.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/mulch-coverage/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/outdoor-earthwork/">Outdoor & Earthwork</a> › Mulch Calculator</nav>
+<h1>Mulch Calculator</h1>
+<p>Mulch depth is usually 2–4 inches. Get bulk yards plus bag count for top-ups.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="ML">Length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="ML" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="MW">Width (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="MW" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="MD">Depth (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="MD" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Volume = area × depth. Yards = cu ft ÷ 27. Bags = cu ft ÷ editable bag size (default 2 cu ft).</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 100 sq ft × 3 in = 25 cu ft = 0.93 yd³ → order 1 yard, or thirteen 2-cu-ft bags.</p></section>
+<section class="card"><h2>Questions</h2><h3>How deep should mulch be?</h3><p>2–4 in (5–10 cm); keep it off stems and trunks.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/outdoor-earthwork/topsoil-calculator/">Topsoil Calculator</a></li><li><a href="/money/outdoor-earthwork/gravel-base/">Gravel Calculator</a></li><li><a href="/money/outdoor-earthwork/paver-calculator/">Paver Calculator</a></li></ul>
+<p><a href="/money/outdoor-earthwork/">Outdoor & Earthwork estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How deep should mulch be?","acceptedAnswer":{"@type":"Answer","text":"2\u20134 in (5\u201310 cm); keep it off stems and trunks."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Outdoor & Earthwork","item":"https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/"},{"@type":"ListItem","position":3,"name":"Mulch Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('ML').value,LU);var W=Calc.lenToM(document.getElementById('MW').value,LU);var D=Calc.lenToM(document.getElementById('MD').value,SU);
+ if(!(L>0&&W>0&&D>0))throw new Error('Enter bed size and depth.');
+ var m3=L*W*D,cuft=m3*35.314666721,yd3=m3/0.764554857984;var bags=cuft/2;
+ return {html:'Volume: <strong>'+Calc.fmt(yd3)+' cu yd</strong> ('+Calc.fmt(cuft)+' cu ft)<br><span class="buy">Buy: '+Math.ceil(yd3*1.05-1e-9)+' yd bulk or '+Math.ceil(bags-1e-9)+' × 2-cu-ft bags</span>'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

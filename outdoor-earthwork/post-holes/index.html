@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post Hole Calculator — Concrete per Hole | MeasureStack</title>
+<meta name="description" content="How much concrete per post hole? Diameter × depth × count → cubic feet, yards and bags.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/post-holes/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/outdoor-earthwork/">Outdoor & Earthwork</a> › Post Hole Calculator</nav>
+<h1>Post Hole Calculator</h1>
+<p>Cylinder volume per hole: π × (d/2)² × depth × count, minus nothing (post displacement ignored = built-in buffer).</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="HD">Hole diameter (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="HD" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="HH">Hole depth (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="HH" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="HN">Number of holes (<span data-unit-label data-imp="count" data-met="count">count</span>)</label>
+<input type="number" id="HN" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>V = πr²h × count → bags = V ÷ yield, rounded up.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: ten 12-in × 36-in holes: 10 × 2.36 cu ft ≈ 23.6 cu ft → ~40 eighty-lb bags; +5% → buy 42.</p></section>
+<section class="card"><h2>Questions</h2><h3>Should I subtract the post?</h3><p>No — ignoring it adds a small safety buffer for spillage.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/outdoor-earthwork/fence-estimator/">Fence Calculator</a></li><li><a href="/money/concrete-masonry/concrete-bags/">Concrete Bag Calculator</a></li><li><a href="/money/outdoor-earthwork/gravel-base/">Gravel Calculator</a></li></ul>
+<p><a href="/money/outdoor-earthwork/">Outdoor & Earthwork estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I subtract the post?","acceptedAnswer":{"@type":"Answer","text":"No \u2014 ignoring it adds a small safety buffer for spillage."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Outdoor & Earthwork","item":"https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/"},{"@type":"ListItem","position":3,"name":"Post Hole Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var d=Calc.lenToM(document.getElementById('HD').value,SU);var h=Calc.lenToM(document.getElementById('HH').value,SU);
+ var n=Number(document.getElementById('HN').value);if(!(d>0&&h>0&&n>0))throw new Error('Enter diameter, depth and count.');
+ var m3=Math.PI*Math.pow(d/2,2)*h*n,cuft=m3*35.314666721;var bags=cuft/0.60;
+ return {html:'Volume: '+Calc.fmt(cuft)+' cu ft ('+Calc.fmt(m3/0.764554857984)+' yd³)<br><span class="buy">Buy: '+Math.ceil(bags*1.05-1e-9)+' eighty-lb bags</span> (0.60 cu ft editable — verify bag)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

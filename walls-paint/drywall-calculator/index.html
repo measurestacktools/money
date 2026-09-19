@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drywall Calculator — Sheets, Screws & Mud | MeasureStack</title>
+<meta name="description" content="How many drywall sheets, screws and joint compound for a room? Walls + ceiling with openings subtracted.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/walls-paint/drywall-calculator/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/walls-paint/">Walls, Paint & Insulation</a> › Drywall Calculator</nav>
+<h1>Drywall Calculator</h1>
+<p>Sheets from net area ÷ 32 sq ft; screws ≈ 32 per sheet; mud ≈ 1 gallon per 100 sq ft (editable).</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="RL2">Room length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="RL2" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="RW2">Room width (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="RW2" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="RH2">Ceiling height (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="RH2" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="RO2">Openings area (<span data-unit-label data-imp="sq ft" data-met="m²">sq ft</span>)</label>
+<input type="number" id="RO2" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Sheets = ceil(netArea ÷ 32) + waste. Screws ≈ sheets × 32. Compound ≈ netArea ÷ 100 gal.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 12×12×8-ft room: walls 2×(12+12)×8 = 384 sq ft + ceiling 144 = 528 − 60 openings = 468 → 468 ÷ 32 = 14.6 sheets; +10% → buy 17.</p></section>
+<section class="card"><h2>Questions</h2><h3>4×8 or 4×12 sheets?</h3><p>4×12 covers faster with fewer seams where it fits through doors and stairs.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/walls-paint/paint-coverage/">Paint Calculator</a></li><li><a href="/money/walls-paint/insulation-batts/">Insulation Calculator</a></li><li><a href="/money/lumber-framing/plywood-sheets/">Plywood Sheet Calculator</a></li></ul>
+<p><a href="/money/walls-paint/">Walls, Paint & Insulation estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"4\u00d78 or 4\u00d712 sheets?","acceptedAnswer":{"@type":"Answer","text":"4\u00d712 covers faster with fewer seams where it fits through doors and stairs."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Walls, Paint & Insulation","item":"https://rayanbaig796-crypto.github.io/money/walls-paint/"},{"@type":"ListItem","position":3,"name":"Drywall Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('RL2').value,LU);var W=Calc.lenToM(document.getElementById('RW2').value,LU);var H=Calc.lenToM(document.getElementById('RH2').value,LU);
+ if(!(L>0&&W>0&&H>0))throw new Error('Enter room dimensions.');
+ var wallM2=2*(L+W)*H,totM2=wallM2+L*W;var op=unit==='metric'?Number(document.getElementById('RO2').value||0):Number(document.getElementById('RO2').value||0)*0.09290304;
+ var net=Math.max(0,totM2-op);var sqft=net/0.09290304;var sheets=net/2.975;var buy=Math.ceil(sheets*1.10-1e-9);
+ return {html:'Net area: '+Calc.fmt(sqft)+' sq ft<br><span class="buy">Buy: '+buy+' sheets (4×8)</span> (+10%)<br>Screws ≈ '+(buy*32).toLocaleString()+'<br>Joint compound ≈ '+Calc.fmt(sqft/100)+' gal (verify product coverage)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

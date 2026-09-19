@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravel Calculator — Cubic Yards & Tons | MeasureStack</title>
+<meta name="description" content="How much gravel for a driveway or slab base? Enter area and depth to get cubic yards and tons (editable density).">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/gravel-base/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/outdoor-earthwork/">Outdoor & Earthwork</a> › Gravel Calculator</nav>
+<h1>Gravel Calculator</h1>
+<p>Gravel is sold by the cubic yard or ton. Enter area and compacted depth; density (tons per yard) is editable because stone varies.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="GL">Length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="GL" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="GW">Width (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="GW" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="GD">Depth (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="GD" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="GT">Tons per cubic yard (editable) (<span data-unit-label data-imp="tons" data-met="tons">tons</span>)</label>
+<input type="number" id="GT" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Volume = area × depth (SI base). Yards = m³ ÷ 0.7646. Tons = yards × editable tons/yard (default 1.4).</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 20 ft × 10 ft × 4 in = 2.47 yd³ → ≈3.5 tons at 1.4 tons/yd; order ~4 tons with waste.</p></section>
+<section class="card"><h2>Questions</h2><h3>How many tons in a yard of gravel?</h3><p>Commonly 1.3–1.5 tons depending on stone; default 1.4, editable.</p><h3>Do I compact before or after measuring?</h3><p>Enter final compacted depth and add 5–10% for compaction loss.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/concrete-masonry/concrete-slab/">Concrete Slab Calculator</a></li><li><a href="/money/outdoor-earthwork/paver-calculator/">Paver Calculator</a></li><li><a href="/money/outdoor-earthwork/topsoil-calculator/">Topsoil Calculator</a></li></ul>
+<p><a href="/money/outdoor-earthwork/">Outdoor & Earthwork estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many tons in a yard of gravel?","acceptedAnswer":{"@type":"Answer","text":"Commonly 1.3\u20131.5 tons depending on stone; default 1.4, editable."}},{"@type":"Question","name":"Do I compact before or after measuring?","acceptedAnswer":{"@type":"Answer","text":"Enter final compacted depth and add 5\u201310% for compaction loss."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Outdoor & Earthwork","item":"https://rayanbaig796-crypto.github.io/money/outdoor-earthwork/"},{"@type":"ListItem","position":3,"name":"Gravel Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('GL').value,LU);var W=Calc.lenToM(document.getElementById('GW').value,LU);var D=Calc.lenToM(document.getElementById('GD').value,SU);
+ if(!(L>0&&W>0&&D>0))throw new Error('Enter length, width and depth.');
+ var m3=L*W*D,yd3=m3/0.764554857984;var t=Number(document.getElementById('GT').value||1.4);if(!(t>0))throw new Error('Density must be positive.');
+ var tons=yd3*t;return {html:'Volume: <strong>'+Calc.fmt(yd3)+' cu yd</strong> ('+Calc.fmt(m3)+' m³)<br><span class="buy">Order: '+Calc.fmt(tons)+' tons</span> (+5–10% compaction)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

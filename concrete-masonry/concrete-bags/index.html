@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Bag Calculator — How Many Bags? | MeasureStack</title>
+<meta name="description" content="Know your volume in cubic feet or yards? Convert it to 40, 60 or 80-lb premix bags with editable yield. Fast jobsite math.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/concrete-masonry/concrete-bags/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/concrete-masonry/">Concrete & Masonry</a> › Concrete Bag Calculator</nav>
+<h1>Concrete Bag Calculator</h1>
+<p>If you already know the volume (for example from the slab tool), convert it to bags here. Yield per bag is editable — never assume one universal number.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="V">Volume (<span data-unit-label data-imp="cu ft" data-met="m³">cu ft</span>)</label>
+<input type="number" id="V" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="vu">Volume unit</label><select id="vu"><option value="cuft">cubic feet</option><option value="yd3">cubic yards</option><option value="m3">cubic metres</option></select></div>
+ <div class="field"><label for="yield2">Yield per bag (cu ft)</label><input type="number" id="yield2" inputmode="decimal" min="0" step="any" value="0.60"></div>
+ <div class="field"><label for="waste2">Waste %</label><input type="number" id="waste2" inputmode="decimal" min="0" step="any" value="5"></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p><strong>Bags</strong> = volume ÷ editable yield per bag, rounded up, plus waste %.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 20 cu ft ÷ 0.60 cu ft per 80-lb bag = 33.3 → 34 bags; with 5% waste buy 35.</p></section>
+<section class="card"><h2>Questions</h2><h3>What is the yield of an 80-lb bag?</h3><p>Commonly about 0.60 cu ft, but it varies by product. This tool defaults to 0.60 and lets you change it.</p><h3>40 vs 60 vs 80-lb bags?</h3><p>Bigger bags mean fewer bags to carry and mix; the math is identical — volume divided by yield.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/concrete-masonry/concrete-slab/">Concrete Slab Calculator</a></li><li><a href="/money/outdoor-earthwork/post-holes/">Post Hole Calculator</a></li><li><a href="/money/outdoor-earthwork/fence-estimator/">Fence Calculator</a></li></ul>
+<p><a href="/money/concrete-masonry/">Concrete & Masonry estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the yield of an 80-lb bag?","acceptedAnswer":{"@type":"Answer","text":"Commonly about 0.60 cu ft, but it varies by product. This tool defaults to 0.60 and lets you change it."}},{"@type":"Question","name":"40 vs 60 vs 80-lb bags?","acceptedAnswer":{"@type":"Answer","text":"Bigger bags mean fewer bags to carry and mix; the math is identical \u2014 volume divided by yield."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Concrete & Masonry","item":"https://rayanbaig796-crypto.github.io/money/concrete-masonry/"},{"@type":"ListItem","position":3,"name":"Concrete Bag Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var vu=document.getElementById('vu').value;var V=Calc.nonNeg(document.getElementById('V').value,'Volume');
+ var cuft=V*(vu==='yd3'?27:(vu==='m3'?35.314666721:1));if(!(cuft>0))throw new Error('Enter a volume greater than zero.');
+ var y=Calc.nonNeg(document.getElementById('yield2').value,'Yield');if(!(y>0))throw new Error('Yield must be greater than zero.');
+ var w=Calc.nonNeg(document.getElementById('waste2').value,'Waste');var bags=cuft/y,buy=Math.ceil(bags*(1+w/100)-1e-9);
+ return {html:'Calculated: '+Calc.fmt(bags,1)+' bags<br><span class="buy">Buy: '+buy+' bags</span> (rounded up + '+w+'% waste)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+{
+ "tools": [
+  {
+   "slug": "concrete-slab",
+   "title": "Concrete Slab Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/concrete-slab/",
+   "keys": "concrete slab calculator concrete slab calculator \u2014 cubic yards & bags | measurestack concrete-masonry"
+  },
+  {
+   "slug": "concrete-bags",
+   "title": "Concrete Bag Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/concrete-bags/",
+   "keys": "concrete bag calculator concrete bag calculator \u2014 how many bags? | measurestack concrete-masonry"
+  },
+  {
+   "slug": "footings-piers",
+   "title": "Footing & Pier Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/footings-piers/",
+   "keys": "footing & pier calculator concrete footing & pier calculator | measurestack concrete-masonry"
+  },
+  {
+   "slug": "block-wall",
+   "title": "Concrete Block Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/block-wall/",
+   "keys": "concrete block calculator concrete block calculator \u2014 blocks & mortar | measurestack concrete-masonry"
+  },
+  {
+   "slug": "brick-wall",
+   "title": "Brick Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/brick-wall/",
+   "keys": "brick calculator brick calculator \u2014 bricks & mortar | measurestack concrete-masonry"
+  },
+  {
+   "slug": "mortar-mix",
+   "title": "Mortar Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/mortar-mix/",
+   "keys": "mortar calculator mortar calculator \u2014 bags for block & brick | measurestack concrete-masonry"
+  },
+  {
+   "slug": "rebar-grid",
+   "title": "Rebar Calculator",
+   "cat": "concrete-masonry",
+   "url": "/money/concrete-masonry/rebar-grid/",
+   "keys": "rebar calculator rebar calculator \u2014 grid for slabs | measurestack concrete-masonry"
+  },
+  {
+   "slug": "gravel-base",
+   "title": "Gravel Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/gravel-base/",
+   "keys": "gravel calculator gravel calculator \u2014 cubic yards & tons | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "mulch-coverage",
+   "title": "Mulch Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/mulch-coverage/",
+   "keys": "mulch calculator mulch calculator \u2014 yards & bags | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "topsoil-calculator",
+   "title": "Topsoil Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/topsoil-calculator/",
+   "keys": "topsoil calculator topsoil calculator \u2014 cubic yards | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "paver-calculator",
+   "title": "Paver Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/paver-calculator/",
+   "keys": "paver calculator paver calculator \u2014 pavers, sand & base | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "board-feet",
+   "title": "Board Foot Calculator",
+   "cat": "lumber-framing",
+   "url": "/money/lumber-framing/board-feet/",
+   "keys": "board foot calculator board feet calculator \u2014 lumber volume & cost | measurestack lumber-framing"
+  },
+  {
+   "slug": "stud-wall",
+   "title": "Stud Wall Calculator",
+   "cat": "lumber-framing",
+   "url": "/money/lumber-framing/stud-wall/",
+   "keys": "stud wall calculator stud wall calculator \u2014 studs, plates & blocking | measurestack lumber-framing"
+  },
+  {
+   "slug": "plywood-sheets",
+   "title": "Plywood Sheet Calculator",
+   "cat": "lumber-framing",
+   "url": "/money/lumber-framing/plywood-sheets/",
+   "keys": "plywood sheet calculator plywood & sheet calculator \u2014 4\u00d78 sheets | measurestack lumber-framing"
+  },
+  {
+   "slug": "decking-estimator",
+   "title": "Decking Calculator",
+   "cat": "lumber-framing",
+   "url": "/money/lumber-framing/decking-estimator/",
+   "keys": "decking calculator decking calculator \u2014 boards & screws | measurestack lumber-framing"
+  },
+  {
+   "slug": "drywall-calculator",
+   "title": "Drywall Calculator",
+   "cat": "walls-paint",
+   "url": "/money/walls-paint/drywall-calculator/",
+   "keys": "drywall calculator drywall calculator \u2014 sheets, screws & mud | measurestack walls-paint"
+  },
+  {
+   "slug": "paint-coverage",
+   "title": "Paint Calculator",
+   "cat": "walls-paint",
+   "url": "/money/walls-paint/paint-coverage/",
+   "keys": "paint calculator paint calculator \u2014 gallons & primer | measurestack walls-paint"
+  },
+  {
+   "slug": "siding-estimator",
+   "title": "Siding Calculator",
+   "cat": "walls-paint",
+   "url": "/money/walls-paint/siding-estimator/",
+   "keys": "siding calculator siding calculator \u2014 squares & panels | measurestack walls-paint"
+  },
+  {
+   "slug": "insulation-batts",
+   "title": "Insulation Calculator",
+   "cat": "walls-paint",
+   "url": "/money/walls-paint/insulation-batts/",
+   "keys": "insulation calculator insulation calculator \u2014 batts & rolls | measurestack walls-paint"
+  },
+  {
+   "slug": "tile-estimator",
+   "title": "Tile Calculator",
+   "cat": "flooring-tile",
+   "url": "/money/flooring-tile/tile-estimator/",
+   "keys": "tile calculator tile calculator \u2014 tiles & grout | measurestack flooring-tile"
+  },
+  {
+   "slug": "grout-calculator",
+   "title": "Grout Calculator",
+   "cat": "flooring-tile",
+   "url": "/money/flooring-tile/grout-calculator/",
+   "keys": "grout calculator grout calculator \u2014 pounds & bags | measurestack flooring-tile"
+  },
+  {
+   "slug": "laminate-flooring",
+   "title": "Laminate Floor Calculator",
+   "cat": "flooring-tile",
+   "url": "/money/flooring-tile/laminate-flooring/",
+   "keys": "laminate floor calculator laminate & vinyl floor calculator | measurestack flooring-tile"
+  },
+  {
+   "slug": "carpet-estimator",
+   "title": "Carpet Calculator",
+   "cat": "flooring-tile",
+   "url": "/money/flooring-tile/carpet-estimator/",
+   "keys": "carpet calculator carpet calculator \u2014 sq yards & rolls | measurestack flooring-tile"
+  },
+  {
+   "slug": "roof-shingles",
+   "title": "Roof Shingle Calculator",
+   "cat": "roofing",
+   "url": "/money/roofing/roof-shingles/",
+   "keys": "roof shingle calculator roofing shingle calculator \u2014 squares & bundles | measurestack roofing"
+  },
+  {
+   "slug": "metal-roofing",
+   "title": "Metal Roof Calculator",
+   "cat": "roofing",
+   "url": "/money/roofing/metal-roofing/",
+   "keys": "metal roof calculator metal roof panel calculator | measurestack roofing"
+  },
+  {
+   "slug": "roof-pitch",
+   "title": "Roof Pitch Calculator",
+   "cat": "roofing",
+   "url": "/money/roofing/roof-pitch/",
+   "keys": "roof pitch calculator roof pitch calculator \u2014 angle & multiplier | measurestack roofing"
+  },
+  {
+   "slug": "gutter-calculator",
+   "title": "Gutter Calculator",
+   "cat": "roofing",
+   "url": "/money/roofing/gutter-calculator/",
+   "keys": "gutter calculator gutter calculator \u2014 length & downspouts | measurestack roofing"
+  },
+  {
+   "slug": "fence-estimator",
+   "title": "Fence Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/fence-estimator/",
+   "keys": "fence calculator fence calculator \u2014 pickets, posts & concrete | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "post-holes",
+   "title": "Post Hole Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/post-holes/",
+   "keys": "post hole calculator post hole calculator \u2014 concrete per hole | measurestack outdoor-earthwork"
+  },
+  {
+   "slug": "stair-stringer",
+   "title": "Stair Calculator",
+   "cat": "outdoor-earthwork",
+   "url": "/money/outdoor-earthwork/stair-stringer/",
+   "keys": "stair calculator stair stringer calculator \u2014 rise, run & steps | measurestack outdoor-earthwork"
+  }
+ ],
+ "synonyms": {
+  "cement": "concrete",
+  "boards": "lumber board feet",
+  "patio": "paver concrete slab",
+  "paint walls": "paint drywall",
+  "roof": "shingle metal pitch gutter",
+  "dirt": "topsoil gravel",
+  "fence posts": "fence post holes concrete"
+ }
+}

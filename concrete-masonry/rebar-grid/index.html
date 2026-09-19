@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebar Calculator — Grid for Slabs | MeasureStack</title>
+<meta name="description" content="How much rebar for a slab? Enter slab size and bar spacing to get linear feet, pieces and estimated weight.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/concrete-masonry/rebar-grid/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/concrete-masonry/">Concrete & Masonry</a> › Rebar Calculator</nav>
+<h1>Rebar Calculator</h1>
+<p>Rebar forms a grid: bars each way = dimension ÷ spacing + 1. Weight uses standard bar weights (#3 = 0.376 lb/ft, #4 = 0.668 lb/ft).</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="SL">Slab length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="SL" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="SW">Slab width (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="SW" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="SP">Bar spacing (<span data-unit-label data-imp="in" data-met="cm">in</span>)</label>
+<input type="number" id="SP" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BS">Bar size</label><select id="BS"><option value="0.376">#3 (3/8 in)</option><option value="0.668" selected>#4 (1/2 in)</option><option value="1.043">#5 (5/8 in)</option></select></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Bars_x = floor(L/spacing)+1; total length = bars_x×W + bars_y×L. Weight = length × lb/ft.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 20×20 ft slab at 18-in spacing → 14 bars each way → 560 ft of #4 ≈ 374 lb.</p></section>
+<section class="card"><h2>Questions</h2><h3>What size rebar for a slab?</h3><p> commonly #3 or #4; spacing per plans/code. This tool estimates quantity only, not structural design.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/concrete-masonry/concrete-slab/">Concrete Slab Calculator</a></li><li><a href="/money/concrete-masonry/footings-piers/">Footing & Pier Calculator</a></li><li><a href="/money/outdoor-earthwork/gravel-base/">Gravel Calculator</a></li></ul>
+<p><a href="/money/concrete-masonry/">Concrete & Masonry estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size rebar for a slab?","acceptedAnswer":{"@type":"Answer","text":" commonly #3 or #4; spacing per plans/code. This tool estimates quantity only, not structural design."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Concrete & Masonry","item":"https://rayanbaig796-crypto.github.io/money/concrete-masonry/"},{"@type":"ListItem","position":3,"name":"Rebar Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var L=Calc.lenToM(document.getElementById('SL').value,LU)/0.3048;var W=Calc.lenToM(document.getElementById('SW').value,LU)/0.3048;
+ var sp=unit==='metric'?Calc.lenToM(document.getElementById('SP').value,'cm')/0.0254:Number(document.getElementById('SP').value);
+ if(!(L>0&&W>0&&sp>0))throw new Error('Enter slab size and spacing.');
+ var bx=Math.floor(L*12/sp)+1,by=Math.floor(W*12/sp)+1;var totalFt=bx*W+by*L;var wt=Number(document.getElementById('BS').value);
+ var pcs20=Math.ceil(totalFt/20-1e-9);
+  return {html:'Grid: '+bx+' × '+by+' bars<br>Total: <strong>'+Calc.fmt(totalFt)+' lin ft</strong> (≈ '+Calc.fmt(totalFt*0.3048)+' m)<br>Weight ≈ '+Calc.fmt(totalFt*wt)+' lb<br><span class="buy">Buy: '+pcs20+' × 20-ft sticks</span> (+order 5–10% lap/waste)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

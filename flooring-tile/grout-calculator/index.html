@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grout Calculator — Pounds & Bags | MeasureStack</title>
+<meta name="description" content="How much grout? From tile area with editable coverage — verify against manufacturer charts.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/flooring-tile/grout-calculator/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/flooring-tile/">Flooring & Tile</a> › Grout Calculator</nav>
+<h1>Grout Calculator</h1>
+<p>Grout use depends on tile size, joint width and depth. Default 0.5 lb/sq ft is a planning figure — confirm on the bag chart.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="GA">Tile area (<span data-unit-label data-imp="sq ft" data-met="m²">sq ft</span>)</label>
+<input type="number" id="GA" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="GC">Grout per sq ft in lb (editable) (<span data-unit-label data-imp="lb" data-met="lb">lb</span>)</label>
+<input type="number" id="GC" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Grout lb = area × editable lb per sq ft. Bags = lb ÷ bag size, rounded up.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 100 sq ft × 0.5 = 50 lb → two 25-lb bags.</p></section>
+<section class="card"><h2>Questions</h2><h3>Why is this only an estimate?</h3><p>Wide joints and small tiles use much more grout; always check the coverage chart.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/flooring-tile/tile-estimator/">Tile Calculator</a></li><li><a href="/money/flooring-tile/laminate-flooring/">Laminate Floor Calculator</a></li><li><a href="/money/concrete-masonry/mortar-mix/">Mortar Calculator</a></li></ul>
+<p><a href="/money/flooring-tile/">Flooring & Tile estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is this only an estimate?","acceptedAnswer":{"@type":"Answer","text":"Wide joints and small tiles use much more grout; always check the coverage chart."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Flooring & Tile","item":"https://rayanbaig796-crypto.github.io/money/flooring-tile/"},{"@type":"ListItem","position":3,"name":"Grout Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var aRaw=Number(document.getElementById('GA').value);var A=unit==='metric'?aRaw:aRaw*0.09290304;
+ var c=Number(document.getElementById('GC').value||0.5);if(!(A>0&&c>0))throw new Error('Enter area and grout rate.');
+ var lb=A/c* c;A=A/0.09290304;lb=A*c;
+ return {html:'Grout: <strong>'+Calc.fmt(lb)+' lb</strong><br><span class="buy">Buy: '+Math.ceil(lb/25-1e-9)+' × 25-lb bags</span><br><span class="hint">Verify with manufacturer chart for your joint size.</span>'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

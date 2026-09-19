@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Board Feet Calculator — Lumber Volume & Cost | MeasureStack</title>
+<meta name="description" content="Convert lumber dimensions to board feet and estimate cost. Thickness × width × length ÷ 12, with optional price.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/lumber-framing/board-feet/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/lumber-framing/">Lumber & Framing</a> › Board Foot Calculator</nav>
+<h1>Board Foot Calculator</h1>
+<p>A board foot = 144 cubic inches. Enter thickness, width, length and piece count; add your price per board foot for cost.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="BT">Thickness (<span data-unit-label data-imp="in" data-met="mm">in</span>)</label>
+<input type="number" id="BT" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BWd">Width (<span data-unit-label data-imp="in" data-met="mm">in</span>)</label>
+<input type="number" id="BWd" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BLn">Length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="BLn" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BC">Piece count (<span data-unit-label data-imp="count" data-met="count">count</span>)</label>
+<input type="number" id="BC" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="BPp">Price per board foot (optional) (<span data-unit-label data-imp="$" data-met="$">$</span>)</label>
+<input type="number" id="BPp" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>BF per piece = T(in) × W(in) × L(ft) ÷ 12. Total = BF × count. Cost = total × your price.</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: ten 2×4×8 ft boards: 2×4×8/12 = 5.33 BF each → 53.3 BF total.</p></section>
+<section class="card"><h2>Questions</h2><h3>Is a 2×4 really 2 by 4 inches?</h3><p>No — nominal vs actual: a 2×4 is 1.5×3.5 in. Board feet use nominal sizes by convention; note this onitti your order.</p><h3>What about metric?</h3><p>Enter cm/mm and the tool converts to the board-foot equivalent.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/lumber-framing/stud-wall/">Stud Wall Calculator</a></li><li><a href="/money/lumber-framing/plywood-sheets/">Plywood Sheet Calculator</a></li><li><a href="/money/lumber-framing/decking-estimator/">Decking Calculator</a></li></ul>
+<p><a href="/money/lumber-framing/">Lumber & Framing estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a 2\u00d74 really 2 by 4 inches?","acceptedAnswer":{"@type":"Answer","text":"No \u2014 nominal vs actual: a 2\u00d74 is 1.5\u00d73.5 in. Board feet use nominal sizes by convention; note this onitti your order."}},{"@type":"Question","name":"What about metric?","acceptedAnswer":{"@type":"Answer","text":"Enter cm/mm and the tool converts to the board-foot equivalent."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Lumber & Framing","item":"https://rayanbaig796-crypto.github.io/money/lumber-framing/"},{"@type":"ListItem","position":3,"name":"Board Foot Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var u2=unit;var tRaw=Number(document.getElementById('BT').value),wRaw=Number(document.getElementById('BWd').value),lRaw=Number(document.getElementById('BLn').value);
+ var tIn=u2==='metric'?tRaw/25.4:tRaw,wIn=u2==='metric'?wRaw/25.4:wRaw,lFt=u2==='metric'?lRaw/0.3048:lRaw;
+ if(!(tIn>0&&wIn>0&&lFt>0))throw new Error('Enter thickness, width and length.');
+ var c=Number(document.getElementById('BC').value||1);if(!(c>0))throw new Error('Count must be positive.');
+ var bf=tIn*wIn*lFt/12,tot=bf*c;var p=document.getElementById('BPp').value,ex='';
+ if(p!==''&&Number(p)>=0)ex='<br>Est. cost (YOUR price): $'+Calc.fmt(tot*Number(p));
+ return {html:'Per piece: <strong>'+Calc.fmt(bf)+' BF</strong><br>Total: <strong>'+Calc.fmt(tot)+' BF</strong> for '+c+' pcs'+ex};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

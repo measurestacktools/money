@@ -1,0 +1,74 @@
+# MeasureStack (temporary working brand)
+
+Free static construction-material estimators. Central user intent:
+**"How much material do I need?"** — for DIYers, homeowners, builders,
+contractors, tradespeople and renovators.
+
+## Why this niche
+
+Selected after search-landscape research (see `SEO-PLAN.md`):
+evergreen demand, large distinct long-tail (each material = a different
+purpose), 100% client-side math, no APIs, mobile/jobsite use,
+imperial + metric, display-ad-friendly. No traffic is guaranteed;
+the bet is useful tools + topical authority + technical quality.
+
+## Architecture (portable base path)
+
+Project site: `https://rayanbaig796-crypto.github.io/money/`
+Later: user site `https://rayanbaig796-crypto.github.io/` or a custom domain.
+
+Portability rules (follow them when adding pages):
+
+- All internal links and asset paths are **relative** (`../../assets/…`)
+  except content links which use the `/money/` base consistently.
+- `assets/js/site-config.js` is the ONLY place with the brand name,
+  `SITE_URL` and `BASE_PATH`. Set once on deploy:
+  `SITE_URL: "https://YOURNAME.github.io/money"`, `BASE_PATH: "/money/"`.
+  For root/custom domain set `BASE_PATH: "/"` and update `SITE_URL`.
+- `sitemap.xml` + canonicals use `SITE_URL` (currently
+  `https://rayanbaig796-crypto.github.io/money`). To move hosts, update
+  `SITE_URL`/`SITE_CANON` and re-run both render scripts.
+- One canonical page per intent. The imperial/metric toggle never
+  creates extra URLs.
+
+## Run locally (no npm)
+
+```bash
+python -m http.server 8000
+```
+
+then open `http://localhost:8000/` — but internal links use `/money/`,
+so for a faithful local preview serve a parent folder with a `money`
+junction/symlink pointing here, then open
+`http://localhost:8000/money/`. Also works with VS Code Live Server
+(relative asset paths; same `/money/` note applies).
+
+## How to add a new calculator
+
+1. Add one `tool(...)` entry in `gen_part1.py` / `build_tools_data.py`
+   (slug, category, title, meta description, H1, intro, formula HTML,
+   worked example with verified numbers, 2–4 FAQs, 3 related slugs,
+   input fields, compute JS using `Calc` helpers + `LU`/`SU` unit vars).
+2. Verify the formula against a manufacturer/reference source; make every
+   product yield/coverage an **editable input** with a stated default
+   (see `assets/js/assumptions.js`). Never hardcode universal yields.
+3. `python render_site.py && python render_pages.py`
+4. `python qa.py && node test_calc.js && node test_syntax.js`
+5. Fix failures before committing. Update `sitemap.xml` (regenerated).
+
+## SEO architecture
+
+- Static `<title>`, meta description, canonical, H1, intro, formula,
+  example, FAQs per page (never JS-injected).
+- Breadcrumbs + `BreadcrumbList` JSON-LD; `FAQPage` only where FAQs
+  are visible. No fake reviews/ratings.
+- Category hubs + related-tool flows (slab → bags → rebar → gravel),
+  5 supporting guides, static `sitemap.xml`, `robots.txt`.
+
+## Testing
+
+`qa.py` (SEO/link/sitemap/formula/edge cases), `test_calc.js`
+(headless functional, imperial + metric + invalid input + storage
+fallback), `test_syntax.js` (all 30 inline scripts must parse),
+plus live Playwright checks (toggle, persistence, search, 390px
+overflow). Reports in `QA-REPORT.md`.

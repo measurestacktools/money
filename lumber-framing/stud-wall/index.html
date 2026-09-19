@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stud Wall Calculator — Studs, Plates & Blocking | MeasureStack</title>
+<meta name="description" content="How many studs for a wall? Enter wall length with 16 or 24-in spacing to get studs, plates and fasteners.">
+<link rel="canonical" href="https://rayanbaig796-crypto.github.io/money/lumber-framing/stud-wall/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="nav">
+<a class="brand" href="/money/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<nav aria-label="Main"><a href="/money/">Home</a><a href="/money/guides/">Guides</a><a href="/money/about/">About</a></nav>
+</div></header>
+<main id="main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/money/">Home</a> › <a href="/money/lumber-framing/">Lumber & Framing</a> › Stud Wall Calculator</nav>
+<h1>Stud Wall Calculator</h1>
+<p>Counts studs at on-center spacing plus plates (top + bottom, double top) for a framing shopping list.</p>
+<section class="card" aria-label="Calculator">
+<form class="calc" id="f" novalidate>
+<div class="units" id="units" role="group" aria-label="Unit system">
+<button type="button" data-u="imperial" aria-pressed="true">Feet / inches</button>
+<button type="button" data-u="metric" aria-pressed="false">Metric</button></div><div class="field"><label for="WL">Wall length (<span data-unit-label data-imp="ft" data-met="m">ft</span>)</label>
+<input type="number" id="WL" inputmode="decimal" min="0" step="any" ></div><div class="field"><label for="OC">Stud spacing</label><select id="OC"><option value="16">16 in on-center</option><option value="24">24 in on-center</option></select></div><div class="field"><label for="WO">Openings (doors/windows) (<span data-unit-label data-imp="count" data-met="count">count</span>)</label>
+<input type="number" id="WO" inputmode="decimal" min="0" step="any" ></div>
+<div><button class="primary" type="submit">Calculate</button></div>
+</form>
+<div class="result" id="r" aria-live="polite"><span class="hint">Enter your measurements and press Calculate.</span></div>
+<p class="hint">Actual product yields vary — check the manufacturer's specs. Estimated cost (if shown) uses YOUR price, not a market price.</p>
+</section>
+<section class="card"><h2>Formula</h2><p>Studs = floor(length ÷ spacing) + 1 end stud + corners/openings allowance. Plates = 3 × length (sole + double top).</p></section>
+<section class="card"><h2>Worked example</h2><p>Example: 12-ft wall at 16 in OC: 12×12/16 = 9 + 1 = 10 studs + 1 extra → buy 11–12.</p></section>
+<section class="card"><h2>Questions</h2><h3>16 vs 24-in spacing?</h3><p>16 in OC is standard for load-bearing; 24 in OC allowed for some non-bearing walls per code.</p></section>
+<section class="card"><h2>Related estimators</h2><ul><li><a href="/money/lumber-framing/board-feet/">Board Foot Calculator</a></li><li><a href="/money/lumber-framing/plywood-sheets/">Plywood Sheet Calculator</a></li><li><a href="/money/walls-paint/drywall-calculator/">Drywall Calculator</a></li></ul>
+<p><a href="/money/lumber-framing/">Lumber & Framing estimators</a> · <a href="/money/">All estimators</a></p></section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"16 vs 24-in spacing?","acceptedAnswer":{"@type":"Answer","text":"16 in OC is standard for load-bearing; 24 in OC allowed for some non-bearing walls per code."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rayanbaig796-crypto.github.io/money/"},{"@type":"ListItem","position":2,"name":"Lumber & Framing","item":"https://rayanbaig796-crypto.github.io/money/lumber-framing/"},{"@type":"ListItem","position":3,"name":"Stud Wall Calculator"}]}</script>
+<script src="../../assets/js/site-config.js"></script>
+<script src="../../assets/js/assumptions.js"></script>
+<script src="../../assets/js/calc.js"></script>
+<script>(function(){var unit=window.Calc?Calc.unitSystem('imperial'):'imperial';if(window.Calc){unit=Calc.bindUnits('units',function(u){unit=u;});}document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();try{var LU=unit==='metric'?'m':'ft',SU=unit==='metric'?'cm':'in';var __R=(function(){var Lft=unit==='metric'?Number(document.getElementById('WL').value)/0.3048:Number(document.getElementById('WL').value);
+ var oc=Number(document.getElementById('OC').value);var op=Number(document.getElementById('WO').value||0);
+ if(!(Lft>0))throw new Error('Enter wall length.');
+ var studs=Math.floor(Lft*12/oc)+1+Math.ceil(op*2)+1;var plateFt=Lft*3;
+ return {html:'<span class="buy">Buy: '+studs+' studs</span> (incl. ends + openings)<br>Plates: '+Calc.fmt(plateFt)+' lin ft (sole + double top)<br>Nails ≈ '+Math.ceil(studs*8)+' (8/stud avg)'};})()}catch(err){Calc.show(document.getElementById('r'),'Error: '+err.message,true);return;}Calc.show(document.getElementById('r'),__R.html,false);});})();</script>
+</main>
+<footer class="site"><div class="inner">
+<p><strong><span data-brand>MeasureStack</span></strong> — fast jobsite material estimators. Estimates only; verify with manufacturer specs and local code.</p>
+<p><a href="/money/about/">About</a> · <a href="/money/privacy/">Privacy</a> · <a href="/money/contact/">Contact</a> · <a href="/money/sitemap.xml">Sitemap</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rayanbaig796-crypto.github.io/money/sitemap.xml
