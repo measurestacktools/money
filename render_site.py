@@ -17,14 +17,26 @@ HEAD = lambda title, desc, canon, depth: f"""<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canon}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="{ASSET(depth)}img/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="{ASSET(depth)}img/favicon.ico">
+<link rel="apple-touch-icon" href="{ASSET(depth)}img/apple-touch-icon.png">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{canon}">
+<meta property="og:image" content="{SITE_CANON}/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MeasureStack — Construction Material Calculators">
 <link rel="stylesheet" href="{ASSET(depth)}css/main.css">
 </head>"""
+
+BRAND_ICON = """<svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="2" y="2" width="60" height="60" rx="14" fill="#0f5fd0"/><rect x="16" y="16" width="32" height="7" rx="3.5" fill="#ffffff"/><rect x="20" y="28" width="24" height="7" rx="3.5" fill="#ffffff" opacity="0.92"/><rect x="24" y="40" width="16" height="7" rx="3.5" fill="#ffbf47"/></svg>"""
 
 HEADER = lambda depth: f"""<body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="nav">
-<a class="brand" href="{BASE}/"><span data-brand>MeasureStack</span> <small>material estimators</small></a>
+<a class="brand" href="{BASE}/">""" + BRAND_ICON + """<span><span data-brand>MeasureStack</span> <small>material estimators</small></span></a>
 <nav aria-label="Main"><a href="{BASE}/">Home</a><a href="{BASE}/guides/">Guides</a><a href="{BASE}/about/">About</a></nav>
 </div></header>
 <main id="main">"""

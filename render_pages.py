@@ -14,13 +14,29 @@ def head(title, desc, canon, depth):
       "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
       "<title>" + title + "</title>\n<meta name=\"description\" content=\"" + desc + "\">\n"
       "<link rel=\"canonical\" href=\"" + canon + "\">\n"
-      "<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f5fd0'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E\">\n"
+      "<link rel=\"icon\" type=\"image/svg+xml\" href=\"" + a + "img/favicon.svg\">\n"
+      "<link rel=\"alternate icon\" type=\"image/x-icon\" href=\"" + a + "img/favicon.ico\">\n"
+      "<link rel=\"apple-touch-icon\" href=\"" + a + "img/apple-touch-icon.png\">\n"
+      "<meta property=\"og:title\" content=\"" + title + "\">\n"
+      "<meta property=\"og:description\" content=\"" + desc + "\">\n"
+      "<meta property=\"og:type\" content=\"website\">\n"
+      "<meta property=\"og:url\" content=\"" + canon + "\">\n"
+      "<meta property=\"og:image\" content=\"" + SITE_CANON + "/assets/img/og-image.png\">\n"
+      "<meta property=\"og:image:width\" content=\"1200\">\n"
+      "<meta property=\"og:image:height\" content=\"630\">\n"
+      "<meta property=\"og:image:alt\" content=\"MeasureStack — Construction Material Calculators\">\n"
       "<link rel=\"stylesheet\" href=\"" + a + "css/main.css\">\n</head>")
+
+BRAND_ICON = ("<svg width=\"28\" height=\"28\" viewBox=\"0 0 64 64\" aria-hidden=\"true\" focusable=\"false\">"
+  "<rect x=\"2\" y=\"2\" width=\"60\" height=\"60\" rx=\"14\" fill=\"#0f5fd0\"/>"
+  "<rect x=\"16\" y=\"16\" width=\"32\" height=\"7\" rx=\"3.5\" fill=\"#ffffff\"/>"
+  "<rect x=\"20\" y=\"28\" width=\"24\" height=\"7\" rx=\"3.5\" fill=\"#ffffff\" opacity=\"0.92\"/>"
+  "<rect x=\"24\" y=\"40\" width=\"16\" height=\"7\" rx=\"3.5\" fill=\"#ffbf47\"/></svg>")
 
 def header(depth):
     return ("<body>\n<a class=\"skip\" href=\"#main\">Skip to content</a>\n"
       "<header class=\"top\"><div class=\"nav\">\n"
-      "<a class=\"brand\" href=\"" + BASE + "/\"><span data-brand>MeasureStack</span> <small>material estimators</small></a>\n"
+      "<a class=\"brand\" href=\"" + BASE + "/\">" + BRAND_ICON + "<span><span data-brand>MeasureStack</span> <small>material estimators</small></span></a>\n"
       "<nav aria-label=\"Main\"><a href=\"" + BASE + "/\">Home</a><a href=\"" + BASE + "/guides/\">Guides</a><a href=\"" + BASE + "/about/\">About</a></nav>\n"
       "</div></header>\n<main id=\"main\">")
 
@@ -57,6 +73,8 @@ home = (head("MeasureStack — How Much Material Do I Need? Free Estimators",
   + "<li><a href=\"" + BASE + "/guides/square-footage/\">How to calculate square footage</a></li>"
   + "<li><a href=\"" + BASE + "/guides/waste-factor/\">How to add material waste</a></li></ul></section>\n"
   + "<section class=\"card\"><h2>Why trust these numbers?</h2><p>Every tool shows its formula, states its product assumptions (bag yields, coverage rates) as editable inputs, rounds purchase quantities up, and never uses scraped store prices — cost estimates use only YOUR price.</p></section>\n"
+  + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"' + SITE_CANON + '/#org","name":"MeasureStack","url":"' + SITE_CANON + '/","logo":"' + SITE_CANON + '/assets/img/icon-512.png"}</script>\n'
+  + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"' + SITE_CANON + '/#site","url":"' + SITE_CANON + '/","name":"MeasureStack","publisher":{"@id":"' + SITE_CANON + '/#org"}}</script>\n'
   + '<script src="assets/js/search.js"></script>\n' + footer(0))
 write("index.html", home)
 
