@@ -66,6 +66,15 @@
 
 ## Branding + indexing readiness (post-launch polish)
 
+## SEO experiment baseline (Search Console, day 0)
+
+- Property `https://measurestacktools.github.io/money/` added (URL prefix), ownership verified via HTML file (kept in repo root — do not delete).
+- Sitemap submitted; status initially "Couldn't fetch" (site serves robots 200 + sitemap 200 `application/xml`; Google retries automatically — re-check tomorrow, do not change the site for this).
+- Homepage: already indexed ("URL is on Google"); indexing re-requested, accepted.
+- gravel-base, paint-coverage: not indexed yet ("unknown to Google"); indexing requested, accepted into priority crawl queue.
+- concrete-slab, tile-estimator: request hit Google's daily quota ("Quota Exceeded"); retry tomorrow. Do not hammer requests — quota is shared and daily.
+- Next: watch Performance for impressions → queries → positions → clicks before any expansion. No new pages until data justifies them.
+
 - Logo: `icon.svg` (master), `logo.svg` (lockup), header inline mark + wordmark, verified at desktop + 390px (28px, no overlap, no height growth, no overflow).
 - Favicons: `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` (+ `icon-192/512.png`); data-URI placeholder removed; all return HTTP 200 live.
 - OG: `og-image.png` 1200×630 local; `og:title/description/type/url/image` (+dimensions/alt) on all 47 pages; `og:url` == canonical everywhere.
