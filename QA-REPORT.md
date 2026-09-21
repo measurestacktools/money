@@ -73,6 +73,7 @@
 - Homepage: already indexed ("URL is on Google"); indexing re-requested, accepted.
 - gravel-base, paint-coverage: not indexed yet ("unknown to Google"); indexing requested, accepted into priority crawl queue.
 - concrete-slab, tile-estimator: request hit Google's daily quota ("Quota Exceeded"); retry tomorrow. Do not hammer requests — quota is shared and daily.
+- Day 1 follow-up: sitemap still "Couldn't fetch" after 24h (site side verified fine) — removed and resubmitted it to force a fresh fetch. Quota reset: indexing now requested and accepted for concrete-slab, tile-estimator, and roof-shingles. Total requested: homepage + gravel + paint + slab + tile + shingles (6/6 accepted). Next check: sitemap status + index coverage in a few days, then Performance impressions.
 - Next: watch Performance for impressions → queries → positions → clicks before any expansion. No new pages until data justifies them.
 
 - Logo: `icon.svg` (master), `logo.svg` (lockup), header inline mark + wordmark, verified at desktop + 390px (28px, no overlap, no height growth, no overflow).
